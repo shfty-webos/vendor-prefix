@@ -1,7 +1,7 @@
 Vendor Prefix
 =========
 
-A simple plugin for easy access to the host browser's CSS vendor prefix.  
+A simple plugin for easy access to the host browser's CSS vendor prefix.
 
 Here's a function that moves inSender to the right 5px each time it gets called. 
 
@@ -15,13 +15,13 @@ Here's a function that moves inSender to the right 5px each time it gets called.
   }
 ```
 
-Nasty. As you can see, a separate call is required for each browser's vendor prefix.  
+Nasty. As you can see, a separate call is required for each browser's vendor prefix.
 
 Here's the same function, only simplified using Vendor Prefix:
 
 ```javascript
   shiftRight: function(inSender) {
-    inSender.applyStyle(enyo.vendorPrefix + 'transform', 'translate(5px,0)');
+    inSender.applyStyle(enyo.vendor + 'transform', 'translate(5px,0)');
   }
 ```
 

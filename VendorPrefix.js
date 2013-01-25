@@ -4,7 +4,7 @@ enyo.vendor = '';
 	var prefix = '';
 	var prefixes = ['transform', 'WebkitTransform', 'MozTransform', 'OTransform', 'msTransform'];
 	var tmp = document.createElement('div');
-	for(i = 0; i < prefixes.length; i++) {
+	for(var i = 0; i < prefixes.length; i++) {
 		if(typeof tmp.style[prefixes[i]] != 'undefined') {
 			prefix = prefixes[i];
 			break;
@@ -13,22 +13,22 @@ enyo.vendor = '';
 			prefix = null;
 		}
 	}
+	
 	switch(prefix) {
 		case 'transform':
-			prefix = '';
+			enyo.vendor = '';
 			break;
 		case 'WebkitTransform':
-			prefix = '-webkit-';
+			enyo.vendor = '-webkit-';
 			break;
 		case 'MozTransform':
-			prefix = '-moz-';
+			enyo.vendor = '-moz-';
 			break;
 		case 'OTransform':
-			prefix = '-o-';
+			enyo.vendor = '-o-';
 			break;
 		case 'msTransform':
-			prefix = '-ms-';
+			enyo.vendor = '-ms-';
 			break;
 	}
-	enyo.vendor = prefix;
 })();
